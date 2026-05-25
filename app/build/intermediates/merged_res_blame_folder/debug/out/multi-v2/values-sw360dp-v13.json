@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.fitwell.app-mergeDebugResources-65:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\adiru\\.gradle\\caches\\transforms-4\\0e13d606e0d8a79149ad13b8045e9f86\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}

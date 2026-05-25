@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FF7043</color>
+    <color name="accentLight">#FFCCBC</color>
+    <color name="black">#000000</color>
+    <color name="cardBg">#FFFFFF</color>
+    <color name="colorBlue">#1E88E5</color>
+    <color name="colorGreen">#43A047</color>
+    <color name="colorGreenLight">#C8E6C9</color>
+    <color name="colorOrange">#FB8C00</color>
+    <color name="colorPrimary">#5C6BC0</color>
+    <color name="colorPrimaryDark">#3949AB</color>
+    <color name="colorPrimaryLight">#9FA8DA</color>
+    <color name="colorPurple">#8E24AA</color>
+    <color name="colorRed">#E53935</color>
+    <color name="divider">#E8EAED</color>
+    <color name="navBarBg">#FFFFFF</color>
+    <color name="statusBarColor">#3949AB</color>
+    <color name="surface">#F8F9FF</color>
+    <color name="textPrimary">#1A1A2E</color>
+    <color name="textSecondary">#6B7280</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">FitWell</string>
+    <string name="close">Close navigation drawer</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="title_home">Home</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_progress">Progress</string>
+    <style name="CardElevated" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardBackgroundColor">@color/cardBg</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+    <style name="HeaderTabStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">#AAFFFFFF</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+    <style name="StatLabel" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="StatValue" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TabStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">@color/accent</item>
+        <item name="tabSelectedTextColor">@color/accent</item>
+        <item name="tabTextColor">@color/textSecondary</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Theme.FitWell" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:windowBackground">@color/surface</item>
+        <item name="android:navigationBarColor">@color/navBarBg</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Theme.FitWell.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorPrimaryDark</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_app_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.FitWell</item>
+    </style>
+</resources>

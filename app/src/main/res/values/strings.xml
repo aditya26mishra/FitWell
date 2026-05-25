@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitWell</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+    <string name="title_home">Home</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="title_progress">Progress</string>
+    <string name="title_profile">Profile</string>
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <android.widget.ScrollView
+        android:id="@+id/nutritionScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NUTRITION" style="@style/StatLabel"/>
+                    <TextView android:id="@+id/tvNutritionDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Today" android:textSize="20sp" android:fontFamily="sans-serif-medium" android:textColor="@color/textPrimary"/>
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScan" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Scan Label" android:textSize="12sp" app:icon="@drawable/ic_camera"
+                    app:iconSize="16dp" app:cornerRadius="10dp" android:backgroundTint="@color/colorPrimary"/>
+            </LinearLayout>
+            <!-- Date selector -->
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:scrollbars="none" android:layout_marginBottom="12dp">
+                <LinearLayout android:id="@+id/nutritionDateRow" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:padding="2dp"/>
+            </HorizontalScrollView>
+
+            <!-- Calorie Summary Card (tappable) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/calorieSummaryCard"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" android:foreground="?attr/selectableItemBackground"
+                app:cardElevation="2dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/cardBg">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CONSUMED" style="@style/StatLabel"/>
+                            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom">
+                                <TextView android:id="@+id/tvTotalCal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="0" android:textSize="40sp" android:fontFamily="sans-serif-light" android:textColor="@color/textPrimary"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text=" kcal" android:textSize="16sp" android:textColor="@color/textSecondary" android:paddingBottom="7dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView android:id="@+id/tvNutritionGoal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="—" android:textSize="14sp" android:textColor="@color/textSecondary"/>
+                    </LinearLayout>
+                    <ProgressBar android:id="@+id/progressNutrition" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent" android:layout_height="10dp"
+                        android:progressDrawable="@drawable/progress_accent" android:max="2000"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── MACROS Collapsible Card ── -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:cardElevation="2dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/cardBg">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="MACRONUTRIENTS" style="@style/StatLabel"/>
+                        <TextView android:id="@+id/btnToggleMacros" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="▲ Macros" android:textSize="12sp" android:textColor="@color/colorPrimary"
+                            android:background="?attr/selectableItemBackground" android:padding="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/macroSection" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp">
+
+                        <!-- Protein row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="Protein" android:textSize="13sp" android:textColor="@color/accent" android:fontFamily="sans-serif-medium"/>
+                            <TextView android:id="@+id/tvNutritionProtein" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="0g / 0g" android:textSize="12sp" android:textColor="@color/textSecondary"/>
+                        </LinearLayout>
+                        <ProgressBar android:id="@+id/pbProtein" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent" android:layout_height="8dp"
+                            android:progressDrawable="@drawable/progress_accent" android:layout_marginBottom="10dp"/>
+
+                        <!-- Carbs row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="Carbohydrates" android:textSize="13sp" android:textColor="@color/colorOrange" android:fontFamily="sans-serif-medium"/>
+                            <TextView android:id="@+id/tvNutritionCarbs" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="0g / 0g" android:textSize="12sp" android:textColor="@color/textSecondary"/>
+                        </LinearLayout>
+                        <ProgressBar android:id="@+id/pbCarbs" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent" android:layout_height="8dp"
+                            android:progressDrawable="@drawable/progress_orange" android:layout_marginBottom="10dp"/>
+
+                        <!-- Fat row -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                                android:text="Fat" android:textSize="13sp" android:textColor="@color/colorBlue" android:fontFamily="sans-serif-medium"/>
+                            <TextView android:id="@+id/tvNutritionFat" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="0g / 0g" android:textSize="12sp" android:textColor="@color/textSecondary"/>
+                        </LinearLayout>
+                        <ProgressBar android:id="@+id/pbFat" style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent" android:layout_height="8dp"
+                            android:progressDrawable="@drawable/progress_primary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── MICROS Collapsible Card ── -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardElevation="2dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/cardBg">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="MICRONUTRIENTS" style="@style/StatLabel"/>
+                        <TextView android:id="@+id/btnToggleMicros" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="▼ Micronutrients" android:textSize="12sp" android:textColor="@color/colorPrimary"
+                            android:background="?attr/selectableItemBackground" android:padding="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/microSection" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:layout_marginTop="8dp" android:visibility="gone">
+                        <!-- Populated dynamically -->
+                        <LinearLayout android:id="@+id/microContainer"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="vertical"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Diet Plan Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDietPlan" android:layout_width="match_parent" android:layout_height="48dp"
+                android:text="View My Diet Plan" android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="12dp" app:strokeColor="@color/colorGreen" android:textColor="@color/colorGreen"/>
+
+            <!-- Meal Tabs -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/mealTabLayout" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@color/cardBg" app:tabIndicatorColor="@color/colorPrimary"
+                app:tabSelectedTextColor="@color/colorPrimary" app:tabTextColor="@color/textSecondary"
+                app:tabIndicatorHeight="3dp" app:tabMode="scrollable"
+                app:tabTextAppearance="@style/TabTextAppearance" android:layout_marginBottom="8dp"/>
+
+            <TextView android:id="@+id/tvEmptyMeal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:text="No items logged for this meal.\nTap + to add food."
+                android:textAlignment="center" android:textColor="@color/textSecondary" android:textSize="14sp"
+                android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMeal" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" android:layout_marginBottom="80dp"/>
+
+        </LinearLayout>
+    </android.widget.ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddFood" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:text="Add Food" app:icon="@drawable/ic_add" android:backgroundTint="@color/colorPrimary"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

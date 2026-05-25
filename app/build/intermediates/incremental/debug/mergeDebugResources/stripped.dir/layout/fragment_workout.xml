@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Date selector -->
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:scrollbars="none" android:layout_marginBottom="8dp">
+                <LinearLayout android:id="@+id/workoutDateRow" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:padding="2dp"/>
+            </HorizontalScrollView>
+
+            <!-- Summary Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/cardBg">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TODAY'S WORKOUT" style="@style/StatLabel" android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:id="@+id/tvWorkoutCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 exercises" android:textSize="22sp" android:fontFamily="sans-serif-medium" android:textColor="@color/colorPrimary"/>
+                        </LinearLayout>
+                        <TextView android:id="@+id/tvWorkoutBurned" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 kcal burned" android:textSize="14sp" android:textColor="@color/accent" android:gravity="end" android:layout_gravity="center_vertical"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Suggestion Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSuggest"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Get Workout Suggestions"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="12dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"/>
+
+            <!-- Exercise List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWorkouts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="80dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="Log Exercise"
+        app:icon="@drawable/ic_add"
+        android:backgroundTint="@color/colorPrimary"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

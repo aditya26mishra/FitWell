@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:paddingBottom="32dp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bg_avatar"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView android:id="@+id/tvProfileName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—" android:textSize="22sp" android:fontFamily="sans-serif-medium" android:textColor="@color/white"/>
+            <TextView android:id="@+id/tvProfileEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="—" android:textSize="13sp" android:textColor="#AAFFFFFF" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Stats Card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/cardBg">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MY STATS" style="@style/StatLabel" android:layout_marginBottom="12dp"/>
+                    <TextView android:id="@+id/tvProfileAge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Age: —" android:textSize="14sp" android:textColor="@color/textPrimary" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvProfileHeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Height: —" android:textSize="14sp" android:textColor="@color/textPrimary" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvProfileWeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weight: —" android:textSize="14sp" android:textColor="@color/textPrimary" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvProfileBmi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BMI: —" android:textSize="14sp" android:fontFamily="sans-serif-medium" android:textColor="@color/colorPrimary" android:layout_marginBottom="6dp"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginVertical="8dp"/>
+                    <TextView android:id="@+id/tvProfileGoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Goal: —" android:textSize="14sp" android:fontFamily="sans-serif-medium" android:textColor="@color/colorGreen" android:layout_marginBottom="6dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                        <TextView android:id="@+id/tvProfileCalGoal" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Calorie Goal: —" android:textSize="14sp" android:textColor="@color/colorOrange"/>
+                        <TextView android:id="@+id/btnEditCalGoalInline" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Edit"
+                            android:textSize="12sp" android:textColor="@color/colorPrimary"
+                            android:background="@drawable/bg_pill"
+                            android:paddingStart="10dp" android:paddingEnd="10dp"
+                            android:paddingTop="3dp" android:paddingBottom="3dp"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvProfileStepGoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Step Goal: —" android:textSize="14sp" android:textColor="@color/colorGreen" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvProfileDiet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Diet: —" android:textSize="14sp" android:textColor="@color/textPrimary" android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tvProfileActivity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Activity: —" android:textSize="14sp" android:textColor="@color/textPrimary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Settings Card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/cardBg">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SETTINGS" style="@style/StatLabel" android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dark Mode" android:textSize="15sp" android:textColor="@color/textPrimary"/>
+                        <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchDarkMode" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Hydration Reminders" android:textSize="15sp" android:textColor="@color/textPrimary"/>
+                        <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchNotifications" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Language" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="6dp"/>
+                    <Spinner android:id="@+id/spinnerLanguage" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Buttons -->
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnViewPlan" android:layout_width="match_parent" android:layout_height="52dp" android:text="View My Personalised Plan" android:layout_marginBottom="8dp" app:cornerRadius="14dp" android:backgroundTint="@color/colorPrimary"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEditPrefs" android:layout_width="match_parent" android:layout_height="52dp" android:text="Edit Preferences" android:layout_marginBottom="8dp" app:cornerRadius="14dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton" app:strokeColor="@color/colorPrimary" android:textColor="@color/colorPrimary"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEditCredentials" android:layout_width="match_parent" android:layout_height="52dp" android:text="Edit Profile" android:layout_marginBottom="8dp" app:cornerRadius="14dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton" app:strokeColor="@color/colorBlue" android:textColor="@color/colorBlue"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="52dp" android:text="Logout" android:layout_marginBottom="24dp" app:cornerRadius="14dp" android:backgroundTint="@color/colorRed"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

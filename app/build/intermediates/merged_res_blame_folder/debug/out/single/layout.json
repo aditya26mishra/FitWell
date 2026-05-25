@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/item_spinner.xml",
+        "source": "com.fitwell.app-main-69:/layout/item_spinner.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/drawer_header.xml",
+        "source": "com.fitwell.app-main-69:/layout/drawer_header.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_home.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_profile.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/item_food_search.xml",
+        "source": "com.fitwell.app-main-69:/layout/item_food_search.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/dialog_workout.xml",
+        "source": "com.fitwell.app-main-69:/layout/dialog_workout.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_steps.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_steps.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/activity_scan.xml",
+        "source": "com.fitwell.app-main-69:/layout/activity_scan.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/dialog_edit_profile.xml",
+        "source": "com.fitwell.app-main-69:/layout/dialog_edit_profile.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/dialog_add_food.xml",
+        "source": "com.fitwell.app-main-69:/layout/dialog_add_food.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_workout.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_workout.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_calorie_home.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_calorie_home.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_chart_steps.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_chart_steps.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_nutrition.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_nutrition.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/activity_auth.xml",
+        "source": "com.fitwell.app-main-69:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/item_food_log.xml",
+        "source": "com.fitwell.app-main-69:/layout/item_food_log.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/item_workout_log.xml",
+        "source": "com.fitwell.app-main-69:/layout/item_workout_log.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_chart_workouts.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_chart_workouts.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/activity_main.xml",
+        "source": "com.fitwell.app-main-69:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_progress.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_progress.xml"
+    },
+    {
+        "merged": "com.fitwell.app-mergeDebugResources-66:/layout/fragment_chart_calories.xml",
+        "source": "com.fitwell.app-main-69:/layout/fragment_chart_calories.xml"
+    }
+]

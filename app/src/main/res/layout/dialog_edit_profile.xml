@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Height (cm)" android:layout_marginEnd="8dp">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEditHeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Weight (kg)">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEditWeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Target Weight (kg)" android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEditTarget" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Daily Step Goal" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEditSteps" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Manual calorie goal override -->
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Daily Calorie Goal (optional override)" android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEditCalGoal" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Goal date (weight loss) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Goal Date (Weight Loss only)" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="6dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditGoalDate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Tap to change goal date"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Goal" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+        <Spinner android:id="@+id/spEditGoal" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Diet" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+        <Spinner android:id="@+id/spEditDiet" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Activity Level" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+        <Spinner android:id="@+id/spEditActivity" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp"/>
+
+    </LinearLayout>
+</ScrollView>

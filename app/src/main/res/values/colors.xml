@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5C6BC0</color>
+    <color name="colorPrimaryDark">#3949AB</color>
+    <color name="colorPrimaryLight">#9FA8DA</color>
+    <color name="accent">#FF7043</color>
+    <color name="accentLight">#FFCCBC</color>
+    <color name="colorGreen">#43A047</color>
+    <color name="colorGreenLight">#C8E6C9</color>
+    <color name="colorBlue">#1E88E5</color>
+    <color name="colorOrange">#FB8C00</color>
+    <color name="colorPurple">#8E24AA</color>
+    <color name="colorRed">#E53935</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="textPrimary">#1A1A2E</color>
+    <color name="textSecondary">#6B7280</color>
+    <color name="surface">#F8F9FF</color>
+    <color name="cardBg">#FFFFFF</color>
+    <color name="divider">#E8EAED</color>
+    <color name="navBarBg">#FFFFFF</color>
+    <color name="statusBarColor">#3949AB</color>
+</resources>

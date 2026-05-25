@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="fw_session.xml"/>
+    <exclude domain="sharedpref" path="fw_steps.xml"/>
+    <exclude domain="sharedpref" path="fw_settings.xml"/>
+</full-backup-content>

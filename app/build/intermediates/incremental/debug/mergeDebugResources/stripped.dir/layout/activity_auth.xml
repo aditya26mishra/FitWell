@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_header_gradient"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_app_logo"
+            android:background="@drawable/bg_circle_primary"
+            android:padding="14dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FitWell"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your personal fitness companion"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/authTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardBg"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/textSecondary"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill">
+        <com.google.android.material.tabs.TabItem android:text="Login" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:text="Register" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- LOGIN CARD -->
+            <LinearLayout
+                android:id="@+id/loginCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:layout_marginBottom="16dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLoginEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    app:endIconMode="password_toggle"
+                    android:layout_marginBottom="24dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLoginPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ProgressBar
+                    android:id="@+id/loginProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Login"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    android:backgroundTint="@color/colorPrimary"/>
+            </LinearLayout>
+
+            <!-- REGISTER CARD -->
+            <LinearLayout
+                android:id="@+id/registerCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Full Name" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegName" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textPersonName"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Email" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegEmail" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Password (min 8 chars)"
+                    app:endIconMode="password_toggle"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegPass" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Age -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Age" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegAge" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Height with unit toggle -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Height"
+                        android:textSize="12sp" android:textColor="@color/textSecondary"/>
+                    <Spinner android:id="@+id/spinnerHeightUnit" android:layout_width="120dp"
+                        android:layout_height="40dp" android:background="@drawable/bg_edit_text"
+                        android:paddingStart="10dp"/>
+                </LinearLayout>
+                <!-- cm input (shown for cm) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilHeightCm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Height (cm)" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegHeight" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <!-- ft + in inputs (shown for ft/in) -->
+                <LinearLayout android:id="@+id/rowHeightFtIn"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="12dp"
+                    android:visibility="gone">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="Feet" android:layout_marginEnd="8dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRegHeightFt" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="Inches">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRegHeightIn" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Weight with unit toggle -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Weight"
+                        android:textSize="12sp" android:textColor="@color/textSecondary"/>
+                    <Spinner android:id="@+id/spinnerWeightUnit" android:layout_width="120dp"
+                        android:layout_height="40dp" android:background="@drawable/bg_edit_text"
+                        android:paddingStart="10dp"/>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/tilRegWeight"
+                    android:hint="Weight (kg)" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegWeight" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Target Weight with unit label (matches weight unit) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/tilRegTargetWeight"
+                    android:hint="Target Weight (kg) — optional" android:layout_marginBottom="16dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegTargetWeight" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gender" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+                <Spinner android:id="@+id/spinnerGender" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Activity Level" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+                <Spinner android:id="@+id/spinnerActivity" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fitness Goal" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+                <Spinner android:id="@+id/spinnerGoal" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dietary Preference" android:textSize="12sp" android:textColor="@color/textSecondary" android:layout_marginBottom="4dp"/>
+                <Spinner android:id="@+id/spinnerDiet" android:layout_width="match_parent" android:layout_height="48dp" android:background="@drawable/bg_edit_text" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="16dp"/>
+
+                <!-- Goal date row — shown only for Weight Loss -->
+                <LinearLayout
+                    android:id="@+id/goalDateRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Goal Date (optional)" android:textSize="12sp"
+                        android:textColor="@color/textSecondary" android:layout_marginBottom="6dp"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGoalDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Tap to pick target date"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+
+                <ProgressBar android:id="@+id/regProgress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginBottom="8dp" android:visibility="gone"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Create Account"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="32dp"
+                    app:cornerRadius="12dp"
+                    android:backgroundTint="@color/colorPrimary"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
